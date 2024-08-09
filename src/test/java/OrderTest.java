@@ -11,7 +11,7 @@ class OrderTest {
         Customer ahmed = new Customer("Ahmed", "Nasr", "ahmed@super-code.de", Instant.now());
         Order order = new Order(ahmed);
 
-        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902");
+        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902",Category.ELECTRONICS);
         order.addProduct(product, 1);
 
         assertEquals(1, order.getProductQuantity(product));
@@ -22,7 +22,7 @@ class OrderTest {
         Customer ahmed = new Customer("Ahmed", "Nasr", "ahmed@super-code.de", Instant.now());
         Order order = new Order(ahmed);
 
-        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902");
+        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902", Category.ELECTRONICS);
 
         order.addProduct(product, 1);
         order.addProduct(product, 10);
@@ -35,7 +35,7 @@ class OrderTest {
         Customer ahmed = new Customer("Ahmed", "Nasr", "ahmed@super-code.de", Instant.now());
         Order order = new Order(ahmed);
 
-        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902");
+        Product product = new Product("Handy", "Gutes Handy wenn deines kaputt ist", 1000, "H292902", Category.ELECTRONICS);
 
         order.addProduct(product, 1);
         assertEquals(1, order.getProductQuantity(product));

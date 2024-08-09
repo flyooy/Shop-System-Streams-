@@ -6,12 +6,22 @@ public class Product {
     private String description;
     private float price;
     private String articleNr;
+    private Category category;
 
-    public Product(String name, String description, float price, String articleNr) {
+    public Product(String name, String description, float price, String articleNr, Category category) {
         this.setName(name);
         this.setDescription(description);
         this.setPrice(price);
         this.setArticleNr(articleNr);
+        this.setCategory(category);
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public String getName() {

@@ -4,11 +4,6 @@ import java.util.Map;
 
 public class Order {
     private Customer customer;
-
-    public Map<Product, Integer> getProducts() {
-        return products;
-    }
-
     private Map<Product, Integer> products;
     private boolean hasPaid;
     private Instant orderDate;
@@ -17,6 +12,10 @@ public class Order {
     public Order(Customer customer) {
         this.setCustomer(customer);
         this.products = new HashMap<>();
+    }
+
+    public Map<Product, Integer> getProducts() {
+        return products;
     }
 
     public float totalOrderValue() {
